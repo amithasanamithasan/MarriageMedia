@@ -19,17 +19,30 @@ Route::get('/', function () {
 
 Auth::routes();
 
-Route::get('/home', 'HomeController@index')->name('home');
+//Route::get('/home', 'HomeController@index')->name('home');
 
 Route::get('/user', 'UserController@index')->name('user');
 
 Route::get('/admin', 'AdminController@index')->name('admin');
+
+//////////////////////////////////////////////////////////////////////////
 Route::get('/user/gallery', 'UserController@Gallery')->name('user.gallery');
+Route::get('/user/Contact', 'UserController@Contact_us')->name('user.Contact');
 
 
+///////////////user register insert/////////////////////////////////////////
+Route::get('/user/register', 'UserController@register')->name('user.register');
+route::post('store/post', 'UserController@storepost')->name('store.post');
 
 
+//////////////admin crud oparatin from user///////////////////////////////
+Route::get('admin/all/category', 'AdminController@AllCategory')->name('all.category');
+route::get('/view/category/{id}', 'AdminController@Viewcategory')->name('viewcat');
+route::get('/delete/category/{id}', 'AdminController@Deletecategory')->name('deletecategory');
 
+
+route::get('/edit/category/{id}', 'AdminController@Editcategory')->name('editcategory');
+route::post('update/category/{id}', 'AdminController@Updatecategory');
 
 
 

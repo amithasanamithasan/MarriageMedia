@@ -1,25 +1,4 @@
-@extends('layouts.app')
-@section('content')
-<div class="container">
-    <div class="row justify-content-center">
-        <div class="col-md-8">
-            <div class="card">
-                <div class="card-header">{{ __('Dashboard') }}</div>
-
-                <div class="card-body">
-                    @if (session('status'))
-                        <div class="alert alert-success" role="alert">
-                            {{ session('status') }}
-                        </div>
-                    @endif
-
-                    {{ __('You are logged in!') }}
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-@endsection 
+ 
 
 <!--Author: W3layouts
 Author URL: http://w3layouts.com
@@ -45,6 +24,12 @@ License URL: http://creativecommons.org/licenses/by/3.0/
             window.scrollTo(0, 1);
         }
     </script>
+
+     <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/css/toastr.css">
+
+
+
+
     <!-- Custom Theme files -->
     <link href="{{asset('fontend/css/bootstrap.css')}}" type="text/css" rel="stylesheet" media="all">
     <link href="{{asset('fontend/css/style.css')}}" type="text/css" rel="stylesheet" media="all">
@@ -64,13 +49,13 @@ License URL: http://creativecommons.org/licenses/by/3.0/
         <header>    
     <nav class="mnu navbar-light">
             <div class="logo" id="logo">
-                <h1><a href="index.html">Marrige Media</a></h1>
+                <h1><a href="index.html">Marriage Media</a></h1>
             </div>
                 <label for="drop" class="toggle"><span class="fa fa-bars"></span></label>
                 <input type="checkbox" id="drop">
                     <ul class="menu">
-                        <li class="active"><a href="index.html">Home</a></li>
-                        <li><a href="about.html">About</a></li>
+                        <li class="active"><a href="/user">Home</a></li>
+                        <li><a href="{{route('user.register')}}">Register Member</a></li>
                         <li>
                             <!-- First Tier Drop Down -->
                             <label for="drop-2" class="toggle">Drop Down <span class="fa fa-angle-down" aria-hidden="true"></span> </label>
@@ -82,17 +67,25 @@ License URL: http://creativecommons.org/licenses/by/3.0/
                                
                                 <li><a href="{{route('user.gallery')}}">Gallery</a>
                                 </li>
+
                             </ul>
                         </li>
+                     <li><a href="{{route('user.Contact')}}">Contact Us</a></li>
 
-                        <li><a href="contact.html">Contact Us</a></li>
-                         <a href="#">LOGOUT <span class="fa fa-angle-down" aria-hidden="true"></span></a>
-                           <!--  <input type="checkbox" id="drop-2" /> -->
-                            <ul>
-                              <li><a href="services.html">logout</a>
-                              </li>
-                    </ul>
-    </nav>
+                     <li>
+
+                    <a class="dropdown-item" href="{{ route('logout') }}"
+                                       onclick="event.preventDefault();
+                                     document.getElementById('logout-form').submit();">
+                                        {{ __('Logout') }}
+                        </a>
+
+                 <form id="logout-form" action="{{ route('logout') }}" method="POST" class="active">
+                 @csrf
+                </form>
+                </li>
+                </ul>
+               </nav>
 </header>
 <!-- //header -->
         <div class="container">
@@ -394,7 +387,31 @@ License URL: http://creativecommons.org/licenses/by/3.0/
             </div>
         </div>
     </div>
+
+
+
     <!--//newsletter-->
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/js/toastr.min.js"> </script>
+
+      <script>
+        @if(Session::has('messege'))
+          var type="{{Session::get('alert-type','info')}}"
+          switch(type){
+              case 'info':
+                   toastr.info("{{ Session::get('messege') }}");
+                   break;
+              case 'success':
+                  toastr.success("{{ Session::get('messege') }}");
+                  break;
+              case 'warning':
+                 toastr.warning("{{ Session::get('messege') }}");
+                  break;
+              case 'error':
+                  toastr.error("{{ Session::get('messege') }}");
+                  break;
+          }
+        @endif
+     </script>  
 
 </body>
 </html>

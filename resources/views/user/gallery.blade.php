@@ -46,7 +46,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
                 <label for="drop" class="toggle"><span class="fa fa-bars"></span></label>
                 <input type="checkbox" id="drop">
                     <ul class="menu">
-                        <li><a href="index.html">Home</a></li>
+                        <li><a href="/user">Home</a></li>
                         <li><a href="about.html">About</a></li>
                         <li class="active">
                             <!-- First Tier Drop Down -->
