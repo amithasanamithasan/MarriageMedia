@@ -77,7 +77,7 @@ function hideURLbar(){ window.scrollTo(0,1); } </script>
                             <a href="#">Dropdown <span class="fa fa-angle-down" aria-hidden="true"></span></a>
                             <input type="checkbox" id="drop-2" />
                             <ul>
-                              <li><a href="services.html">Services</a>
+                              <li><a href="{{route('view.category')}}">Profile </a>
                               </li>
                                
                                 <li>
@@ -86,7 +86,7 @@ function hideURLbar(){ window.scrollTo(0,1); } </script>
                             </ul>
                         </li>
 
-                        <li><a href="contact.html">Contact Us</a></li>
+                        <li><a href="{{route('user.Contact')}}">Contact Us</a></li>
                     </ul>
                    </nav>
                    </header>
@@ -122,9 +122,12 @@ function hideURLbar(){ window.scrollTo(0,1); } </script>
 				</div>
 				<div class="w3_modal_body_grid w3_modal_body_grid1">
 					<span>GENDER</span>
-					<input type="text" name="gender" placeholder="MALE or FEMALE" required=""/>
-					<div class="clear"> </div>
-				</div>
+					<input type="radio" id="male" name="gender" value="male">
+                  <label for="male">Male</label>
+                   <input type="radio" id="female" name="gender" value="female">
+                   <label for="female">Female</label>
+				   </div>
+
 
 				<div class="w3_modal_body_grid w3_modal_body_grid1">
 					<span>Date Of Birth:</span>
@@ -135,8 +138,16 @@ function hideURLbar(){ window.scrollTo(0,1); } </script>
 				
 				<div class="w3_modal_body_grid">
 					<span>religion:</span>
-					<input type="text" name="religion" placeholder="Your Name" required=""/>
 					
+                      <select id="w3_country1" name="religion" class="frm-field" >
+                      	        <option value="Muslim">Muslim</option>
+                                <option value="Hindu">Hindu</option>
+                                 <option value="Christian">Christian </option>
+                                 <option value="Sikh">Sikh</option>
+                                 <option value="Buddhist">Buddhist</option>
+                        </select>
+                                
+
 					<div class="clear"> </div>
 				</div>
 				<div class="w3_modal_body_grid">

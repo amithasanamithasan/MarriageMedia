@@ -33,6 +33,7 @@ Route::get('/user/Contact', 'UserController@Contact_us')->name('user.Contact');
 ///////////////user register insert/////////////////////////////////////////
 Route::get('/user/register', 'UserController@register')->name('user.register');
 route::post('store/post', 'UserController@storepost')->name('store.post');
+route::get('/search','UserController@search');
 
 
 //////////////admin crud oparatin from user///////////////////////////////
@@ -45,4 +46,16 @@ route::get('/edit/category/{id}', 'AdminController@Editcategory')->name('editcat
 route::post('update/category/{id}', 'AdminController@Updatecategory');
 
 
+/////////////////////user crud oparation////////////////////////
 
+
+Route::get('user/view/category', 'UserController@ViewCategory')->name('view.category');
+
+Route::get('admin/addmember', 'AdminController@addmember')->name('addmember');
+
+Route::post('Create/Post', 'AdminController@Addpost')->name('Create.Post');
+
+/////////////search for name/////////////////////
+route::get('/search','AdminController@search');
+
+Route::get('user/profile', 'UserController@profile')->name('profile');

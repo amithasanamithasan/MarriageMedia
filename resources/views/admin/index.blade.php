@@ -43,9 +43,9 @@
               <i class="now-ui-icons design_app"></i>
               <p>Dashboard</p>
             </a>
-          </li>
+          </li>     
           <li>
-            <a href="./icons.html">
+            <a href="{{route('addmember')}}">
               <i class="now-ui-icons education_atom"></i>
               <p>ADD MEMBER</p>
             </a>

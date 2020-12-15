@@ -2,7 +2,13 @@
 <html lang="en">
 
 <head>
- 
+ <title> View Member Profile</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
  
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
   
@@ -15,43 +21,36 @@
 
 <body>
   <div class="container">
-   
-     <div class="row">
-      <div class="col-lg-8 col-md-10 mx-auto">
-        <p>
     
-      <a href="{{route('all.category')}}" class="btn btn-primary" > All category</a>    
-        </p>
-     <div>
-       <ul>
+  
+  <div class="card" style="width:300px">
+  <img class="card-img-top" src="{{URL::to($cat->image)}}" alt="Card image">
+  <div class="card-body ">
+              
+       <li> <p class="font-weight-bold"  >  Name:</p>   {{$cat->name}}</li><br>
 
-        
-           
+               <li><p class="font-weight-bold"  > Age:</p>{{$cat->age}}</li> <br>
 
-            <img src="{{URL::to($cat->image)}}"style="height: 110px; width: 120px;">
-             <li>Category name:{{$cat->name}}</li>
-             <li>Category age:{{$cat->age}}</li>
+             <li><p class="font-weight-bold"  > Phone:</p>{{$cat->phone}}</li> <br>
+             <li><p class="font-weight-bold"  > Gender:</p>{{$cat->gender}}</li> <br>
+            <li><p class="font-weight-bold"  > Dateofbirth:</p>{{$cat->dateofbirth}}</li> <br>
+            <li><p class="font-weight-bold"  > Religion:</p>{{$cat->religion}}</li> <br>
+             <li><p class="font-weight-bold"  > Email:</p>{{$cat->email}}</li> <br>
+             <li><p class="font-weight-bold"  > Occupation:</p>{{$cat->occupation}}</li> <br>
+             <li><p class="font-weight-bold"  > Country:</p>{{$cat->country}}</li> <br>
+             <li><p class="font-weight-bold"  > Bloodgroup:</p>{{$cat->bloodgroup}}</li> <br>
+             <li><p class="font-weight-bold"  > Hight:</p>{{$cat->hight}}</li> <br>
+              <li><p class="font-weight-bold"  > Address:</p>{{$cat->address}}</li> <br>
 
-             <li>Category phone:{{$cat->phone}}</li>
-             <li>Category gender:{{$cat->gender}}</li>
-            <li>Category dateofbirth:{{$cat->dateofbirth}}</li>
-            <li>Category religion:{{$cat->religion}}</li>
-             <li>Category email:{{$cat->email}}</li>
-             <li>Category occupation:{{$cat->occupation}}</li>
-             <li>Category country:{{$cat->country}}</li>
-             <li>Category bloodgroup:{{$cat->bloodgroup}}</li>
-             <li>Category hight:{{$cat->hight}}</li>
-              <li>Category address:{{$cat->address}}</li>
-
-             <li>category Created at:{{$cat->created_at}}</li>
-          </ul>
-     </div>
-          
-      
-
-      </div>
-    </div>
-   </div>
+             <li> <p class="font-weight-bold"  >Category Created at:</p>{{$cat->created_at}}</li> <br>
+    <h4 class="card-title"></h4>
+    <p class="card-text"></p>
+    <a href="{{route('all.category')}}" class="btn btn-primary">See Profile</a>
+  </div>
+</div>
+  </div>
+   
+     
 
 
 

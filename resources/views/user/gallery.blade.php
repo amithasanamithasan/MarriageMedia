@@ -47,7 +47,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
                 <input type="checkbox" id="drop">
                     <ul class="menu">
                         <li><a href="/user">Home</a></li>
-                        <li><a href="about.html">About</a></li>
+                        <li><a href="#">About</a></li>
                         <li class="active">
                             <!-- First Tier Drop Down -->
                             <label for="drop-2" class="toggle">Drop Down <span class="fa fa-angle-down" aria-hidden="true"></span> </label>
@@ -63,7 +63,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
                             </ul>
                         </li>
 
-                        <li><a href="contact.html">Contact Us</a></li>
+                        <li><a href="{{route('user.Contact')}}">Contact Us</a></li>
                     </ul>
     </nav>
 </header>

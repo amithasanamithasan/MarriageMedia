@@ -1,16 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<title>Perfect Match Register Form Responsive Widget Template :: w3layouts</title>
-<!-- Meta tag Keywords -->
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-<meta name="keywords" content="Perfect Match Register Form Responsive Widget,Login form widgets, Sign up Web forms , Login signup Responsive web form,Flat Pricing table,Flat Drop downs,Registration Forms,News letter Forms,Elements" />
-<script type="application/x-javascript"> addEventListener("load", function() { setTimeout(hideURLbar, 0); }, false);
-function hideURLbar(){ window.scrollTo(0,1); } </script>
-<!-- Meta tag Keywords -->
-<!-- css files -->   
-<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/css/toastr.css">
+
+
+	<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/css/toastr.css">
 <!-- navbar  -->
 
 
@@ -20,12 +13,11 @@ function hideURLbar(){ window.scrollTo(0,1); } </script>
 <!-- web-fonts -->
 <link href="//fonts.googleapis.com/css?family=Tangerine:400,700" rel="stylesheet">
 <link href="//fonts.googleapis.com/css?family=GFS+Neohellenic:400,400i,700,700i&amp;subset=greek" rel="stylesheet">
-<!-- //web-fonts -->
-  <title>Wedding Planner Wedding Category Flat Bootstrap Responsive website Template | Gallery :: w3layouts</title>
+    <title>Wedding Planner Wedding Category Flat Bootstrap Responsive website Template | Home :: w3layouts</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta charset="utf-8" />
     <meta name="keywords" content="Wedding Planner Responsive web template, Bootstrap Web Templates, Flat Web Templates, Android Compatible web template, 
-	SmartPhone Compatible web template, free WebDesigns for Nokia, Samsung, LG, Sony Ericsson, Motorola web design" />
+    SmartPhone Compatible web template, free WebDesigns for Nokia, Samsung, LG, Sony Ericsson, Motorola web design" />
     <script>
         addEventListener("load", function () {
             setTimeout(hideURLbar, 0);
@@ -35,18 +27,22 @@ function hideURLbar(){ window.scrollTo(0,1); } </script>
             window.scrollTo(0, 1);
         }
     </script>
+
+     <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/css/toastr.css">
+
+
+
+
     <!-- Custom Theme files -->
     <link href="{{asset('fontend/css/bootstrap.css')}}" type="text/css" rel="stylesheet" media="all">
     <link href="{{asset('fontend/css/style.css')}}" type="text/css" rel="stylesheet" media="all">
-	<!-- font-awesome icons -->
+    <!-- font-awesome icons -->
     <link href="{{asset('fontend/css/fontawesome-all.min.css')}}" rel="stylesheet">
-	<!-- //Custom Theme files -->
-   <!-- online-fonts -->
-	<link href="//fonts.googleapis.com/css?family=Roboto:100i,400,500,700" rel="stylesheet">
-	<link href="//fonts.googleapis.com/css?family=Josefin+Sans:300,400,600,700" rel="stylesheet">
-	<!-- //online-fonts -->
-
-
+    <!-- //Custom Theme files -->
+    <!-- online-fonts -->
+    <link href="//fonts.googleapis.com/css?family=Roboto:100i,400,500,700" rel="stylesheet">
+    <link href="//fonts.googleapis.com/css?family=Josefin+Sans:300,400,600,700" rel="stylesheet">
+    <!-- //online-fonts -->
 </head>
 
 <body>
@@ -79,6 +75,9 @@ function hideURLbar(){ window.scrollTo(0,1); } </script>
 					<span>Phone Number</span>
 					<input type="text" value="{{$category->phone}}"name="phone" placeholder="Your Phone Number" required=""/>
 					<div class="clear"> </div>
+
+					
+
 				</div>
 				<div class="w3_modal_body_grid w3_modal_body_grid1">
 					<span>GENDER</span>
@@ -95,6 +94,7 @@ function hideURLbar(){ window.scrollTo(0,1); } </script>
 				
 				<div class="w3_modal_body_grid">
 					<span>religion:</span>
+				
 					<input type="text"value="{{$category->religion}}" name="religion" placeholder="Religion" required=""/>
 					
 					<div class="clear"> </div>
@@ -131,10 +131,10 @@ function hideURLbar(){ window.scrollTo(0,1); } </script>
 					<div class="clear"> </div>
 				</div>
 				<div class="w3_modal_body_grid w3_modal_body_grid1">
-					<span>YourPhoto:</span>
-				<input type="file" value="{{$category->image}}" name="image" placeholder="YOUR PHOTO" required=""/>
+				<span>YourPhoto:</span>
+			<input type="file" value="{{$category->image}}" name="image" placeholder="YOUR PHOTO" />
 
-					<div class="clear"> </div>
+			<div class="clear"> </div>
 				</div>
 				<div>
 					<input type="hidden" name="oldphoto" value="{{ $category->image }}">
@@ -147,5 +147,6 @@ function hideURLbar(){ window.scrollTo(0,1); } </script>
 			</form>
 		</div>
 		</body>
+		</html>
 			
 		

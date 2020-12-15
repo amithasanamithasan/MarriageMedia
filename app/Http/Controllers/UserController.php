@@ -100,6 +100,31 @@ $notification=array(
     }
 
 
+    public function ViewCategory()
+  {
+    $category =DB::table("registers")->get();
+    //return response()->json($category );
+    return view ('user.view_category', compact('category'));
+
+  }
+   public function search(Request $request)
+{
+  $search = $request->get('search');
+   $member =DB::table('registers')->where('name','like','%'.$search.'%')->paginate(5);
+  return view('admin.view_category',['category'=>$member]);
+
+
+}
+
+public function profile()
+{
+$result =DB::table("addmembers")->get();
+    //return response()->json($category );
+    return view('user.profile', compact('result'));
+}
+  
+
+
 
 
 }
